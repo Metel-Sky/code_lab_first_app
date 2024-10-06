@@ -1,0 +1,10 @@
+^C:\USERS\DJKIF\DESKTOP\FLUTTER_PROJECTS\CODE_LAB_FIRST_APP\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/djkif/Desktop/Flutter_projects/code_lab_first_App/windows -BC:/Users/djkif/Desktop/Flutter_projects/code_lab_first_App/build/windows/x64 --check-stamp-file C:/Users/djkif/Desktop/Flutter_projects/code_lab_first_App/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
