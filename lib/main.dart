@@ -43,36 +43,33 @@ class MyAppState extends ChangeNotifier {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     var appState = context.watch<MyAppState>();
+    //
     var pair = appState.current;
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-        title: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child: Text(
-              "First app",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
+        title: Center(
+          child: Text(
+            "First app",
+            style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
           ),
         ),
         centerTitle: true,
       ),
+      //
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: EdgeInsets.all(5),
-              child: BigCard(pair: pair),
-            ),
+            BigCard(pair: pair),
             SizedBox(
-              height: 15,
+              height: 20,
             ),
             ElevatedButton(
               style: raisedButtonStyle,
