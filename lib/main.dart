@@ -38,12 +38,25 @@ class MyAppState extends ChangeNotifier {
     current = WordPair.random();
     notifyListeners();
   }
+
+  //
+
+  var favorites = <WordPair>[];
+
+  void toggleFavorite() {
+    if (favorites.contains(current)) {
+      favorites.remove(current);
+    } else {
+      favorites.add(current);
+    }
+    notifyListeners();
+  }
 }
+//
 
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     var appState = context.watch<MyAppState>();
     //
     var pair = appState.current;
@@ -55,9 +68,7 @@ class MyHomePage extends StatelessWidget {
           child: Text(
             "First app",
             style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.white),
+                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
         centerTitle: true,
@@ -77,7 +88,10 @@ class MyHomePage extends StatelessWidget {
                 appState.getNext();
                 print('button pressed!');
               },
-              child: Text('Next', style: TextStyle(fontSize: 35)),
+              child: Text(
+                'Next',
+                style: TextStyle(fontSize: 35),
+              ),
             ),
           ],
         ),
@@ -85,5 +99,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-

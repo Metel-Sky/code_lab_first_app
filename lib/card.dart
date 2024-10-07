@@ -14,6 +14,7 @@ class BigCard extends StatelessWidget {
     final theme = Theme.of(context);
     final style = theme.textTheme.displayMedium!.copyWith(
       color: theme.colorScheme.onPrimary,
+      fontWeight: FontWeight.bold,
     );
 
     return Card(
@@ -22,9 +23,10 @@ class BigCard extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Text(
           pair.asUpperCase,
-          style: style, //TextStyle(fontSize: 35, fontWeight: FontWeight.bold)
+          style: style,
           semanticsLabel:
-              "${pair.first} ${pair.second}", //використовується для програм считування тексту з дисплею
+              "${pair.first} ${pair.second}",
+          // ^використовується для програм считування тексту з дисплею
         ),
       ),
     );
