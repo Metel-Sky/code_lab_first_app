@@ -1,4 +1,4 @@
-#Sun Oct 06 19:49:53 EEST 2024
+#Mon Oct 07 10:05:50 EEST 2024
 base.0=C\:\\Users\\djkif\\Desktop\\Flutter_projects\\code_lab_first_App\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\djkif\\Desktop\\Flutter_projects\\code_lab_first_App\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\djkif\\Desktop\\Flutter_projects\\code_lab_first_App\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
