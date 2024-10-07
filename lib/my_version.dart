@@ -89,51 +89,51 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return LayoutBuilder(
-      builder: (context, constraints) {
-        return Scaffold(
-          // appBar: AppBar(
-          //   title: Text('First App'),
-          //   centerTitle: true,
-          // ),
-          body: Row(
-            children: [
-              SafeArea(
-                child: NavigationRail(
-                  extended: constraints.maxWidth >= 600,
-                  destinations: [
-                    NavigationRailDestination(
-                      icon: Icon(Icons.home),
-                      label: Text('Home'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.favorite),
-                      label: Text('Favorites'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.laptop_mac),
-                      label: Text('leptop'),
-                    ),
-                  ],
+        builder: (context, constraints) {
+          return Scaffold(
+            // appBar: AppBar(
+            //   title: Text('First App'),
+            //   centerTitle: true,
+            // ),
+            body: Row(
+              children: [
+                SafeArea(
+                  child: NavigationRail(
+                    extended: constraints.maxWidth >= 600,
+                    destinations: [
+                      NavigationRailDestination(
+                        icon: Icon(Icons.home),
+                        label: Text('Home'),
+                      ),
+                      NavigationRailDestination(
+                        icon: Icon(Icons.favorite),
+                        label: Text('Favorites'),
+                      ),
+                      NavigationRailDestination(
+                        icon: Icon(Icons.laptop_mac),
+                        label: Text('leptop'),
+                      ),
+                    ],
 
-                  selectedIndex: selectedIndex,
-                  onDestinationSelected: (value) {
-                    setState(() {
-                      selectedIndex = value;
-                    });
-                    print('selected: $value');
-                  },
+                    selectedIndex: selectedIndex,
+                    onDestinationSelected: (value) {
+                      setState(() {
+                        selectedIndex = value;
+                      });
+                      print('selected: $value');
+                    },
+                  ),
                 ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Theme.of(context).colorScheme.primaryContainer,
-                  child: page,
+                Expanded(
+                  child: Container(
+                    color: Theme.of(context).colorScheme.primaryContainer,
+                    child: page,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        );
-      }
+              ],
+            ),
+          );
+        }
     );
   }
 }
