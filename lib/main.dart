@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // The container for the current page, with its background color
     // and subtle switching animation.
     var mainArea = ColoredBox(
-      color: colorScheme.surfaceVariant,
+      color: colorScheme.onTertiary,
       child: AnimatedSwitcher(
         duration: Duration(milliseconds: 200),
         child: page,
